@@ -28,6 +28,7 @@ Usuário: michel
 
 Senha: 123456
 
+Para criar um novo usuário deve ser inserido a senha com a função PASSWORD() do MySQL
 
 
 ## Documentação da API
