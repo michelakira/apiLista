@@ -43,6 +43,12 @@
 									"key": "descricao",
 									"value": "Descrição do título de teste ",
 									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -159,7 +165,7 @@
 							"_postman_previewlanguage": null,
 							"header": null,
 							"cookie": [],
-							"body": "{\r\n    \"dados\": [\r\n        {\r\n            \"codigo\": 3,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Teste\",\r\n            \"descricao\": \"Mais%20um%20teste\",\r\n            \"data_entrada\": \"2024-04-22 20:06:11\",\r\n            \"data_atualizacao\": \"2024-04-23 13:56:18\"\r\n        },\r\n        {\r\n            \"codigo\": 7,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 21:43:08\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 8,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 22:07:00\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 9,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"testando\",\r\n            \"data_entrada\": \"2024-04-23 13:37:14\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 10,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"teste\",\r\n            \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n            \"data_entrada\": \"2024-04-23 15:26:50\",\r\n            \"data_atualizacao\": \"2024-04-23 19:04:05\"\r\n        },\r\n        {\r\n            \"codigo\": 11,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-23 18:37:55\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 12,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-24 19:35:51\",\r\n            \"data_atualizacao\": null\r\n        }\r\n    ]\r\n}"
+							"body": "{\r\n    \"dados\": [\r\n        {\r\n            \"codigo\": 3,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Teste\",\r\n            \"descricao\": \"Mais%20um%20teste\",\r\n            \"data_entrada\": \"2024-04-22 20:06:11\",\r\n            \"data_atualizacao\": \"2024-04-23 13:56:18\",\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 7,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 21:43:08\",\r\n            \"data_atualizacao\": null,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 8,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 22:07:00\",\r\n            \"data_atualizacao\": null,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 9,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"testando\",\r\n            \"data_entrada\": \"2024-04-23 13:37:14\",\r\n            \"data_atualizacao\": null,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 10,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"teste\",\r\n            \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n            \"data_entrada\": \"2024-04-23 15:26:50\",\r\n            \"data_atualizacao\": \"2024-04-23 19:04:05\",\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 11,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-23 18:37:55\",\r\n            \"data_atualizacao\": null,\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"codigo\": 12,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-24 19:35:51\",\r\n            \"data_atualizacao\": null,\r\n            \"status\": 1\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				},
@@ -215,7 +221,7 @@
 							"_postman_previewlanguage": null,
 							"header": null,
 							"cookie": [],
-							"body": "{\r\n    \"dados\": {\r\n        \"codigo\": 10,\r\n        \"usuario_codigo\": 1,\r\n        \"titulo\": \"teste\",\r\n        \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n        \"data_entrada\": \"2024-04-23 15:26:50\",\r\n        \"data_atualizacao\": \"2024-04-23 19:04:05\"\r\n    }\r\n}"
+							"body": "{\r\n    \"dados\": {\r\n        \"codigo\": 10,\r\n        \"usuario_codigo\": 1,\r\n        \"titulo\": \"teste\",\r\n        \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n        \"data_entrada\": \"2024-04-23 15:26:50\",\r\n        \"data_atualizacao\": \"2024-04-23 19:04:05\",\r\n        \"status\": 1\r\n    }\r\n}"
 						}
 					]
 				},
@@ -245,7 +251,12 @@
 								},
 								{
 									"key": "descricao",
-									"value": "teste",
+									"value": "Teste 1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
 									"type": "text"
 								}
 							]
@@ -427,21 +438,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "titulo",
-									"value": "teste",
-									"type": "text"
-								},
-								{
-									"key": "descricao",
-									"value": "teste",
-									"type": "text"
-								}
-							]
-						},
 						"url": {
 							"raw": "{{url}}/api/lista/excluir/{{codigo_lista}}",
 							"host": [

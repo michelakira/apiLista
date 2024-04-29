@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29/04/2024 às 14:00
+-- Tempo de geração: 29/04/2024 às 17:22
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -33,7 +33,8 @@ CREATE TABLE `listas` (
   `titulo` char(150) NOT NULL,
   `descricao` text NOT NULL,
   `data_entrada` timestamp NULL DEFAULT NULL,
-  `data_atualizacao` timestamp NULL DEFAULT NULL
+  `data_atualizacao` timestamp NULL DEFAULT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -72,7 +73,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`codigo`, `login`, `senha`, `token`, `nome`) VALUES
-(1, 'michel', '*6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RpZ28iOjEsIm5vbWUiOiJNaWNoZWwgQWtpcmEiLCJleHBpcmVzX2luIjo2MDAsImV4cGlyZXNfaW5fZGF0ZSI6IjIwMjQtMDQtMjUgMDE6MzI6MDYifQ.TdOrXbh9hYRIItp7D0U7HZj4Q4tf0XzmEj-xjwEcA8o', 'Michel Akira');
+(1, 'michel', '*6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RpZ28iOjEsIm5vbWUiOiJNaWNoZWwgQWtpcmEiLCJleHBpcmVzX2luIjo2MDAsImV4cGlyZXNfaW5fZGF0ZSI6IjIwMjQtMDQtMjkgMTc6MjU6MzIifQ.4IRa3xPBhhfNFLb7nbIJQthgghlKW4UQIeeAle0J31M', 'Michel Akira');
 
 --
 -- Índices para tabelas despejadas
