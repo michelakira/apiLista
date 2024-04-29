@@ -73,7 +73,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`codigo`, `login`, `senha`, `token`, `nome`) VALUES
-(1, 'michel', '*6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RpZ28iOjEsIm5vbWUiOiJNaWNoZWwgQWtpcmEiLCJleHBpcmVzX2luIjo2MDAsImV4cGlyZXNfaW5fZGF0ZSI6IjIwMjQtMDQtMjkgMTc6MjU6MzIifQ.4IRa3xPBhhfNFLb7nbIJQthgghlKW4UQIeeAle0J31M', 'Michel Akira');
+(1, 'michel', '*6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9', '', 'Michel Akira');
 
 --
 -- Índices para tabelas despejadas
