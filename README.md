@@ -21,6 +21,9 @@ Na pasta POSTMAN podemos encontrar a collection e environment dos endpoints que 
 
 Na pasta Documentação existe um arquvivo index.html que contém visualmente uma documentação dos endpoints como Curl, retornos em Json e os códigos do erro.
 
+
+Usuario padrão da API:
+
 Usuário: michel
 
 Senha: 123456
