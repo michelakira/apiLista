@@ -51,7 +51,7 @@ $rota->rotasPermitidas(
 
 $rota->rotasPermitidas(
                         array('DELETE'), 
-                        array('Content-type' => 'application/x-www-form-urlencoded'),
+                        array(''),
                         '/lista/excluir/[VAR]', 
                         'Listas::delete',
                         true

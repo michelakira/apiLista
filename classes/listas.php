@@ -84,6 +84,7 @@ class Listas
                 }
                 $sql .= ", usuario_codigo";
                 $sql .= ", data_entrada";
+                $sql .= ", status";
                 $sql .= ") VALUES (";
                 $contador = 1;
                 foreach (array_values($_POST) as $valor) {
@@ -99,6 +100,7 @@ class Listas
 
                 $sql .= ", '{$usuario}'";
                 $sql .= ", CURRENT_TIMESTAMP()";
+                $sql .= ", 1";
                 $sql .= ")";
 
 
@@ -145,6 +147,10 @@ class Listas
                 $erros[] = "Título deve conter no máximo 2000 caracteres.";
                 $encontrouUmaAlteracao = 1;
             }
+            if(isset($_POST['status']) && (!is_numeric($_POST['status']) || ($_POST['status'] < 1) || $_POST['status'] > 2)){
+                $erros[] = "Status deve conter o código 1 - Aberto ou 2 - Fechado.";
+                $encontrouUmaAlteracao = 1;
+            }
 
             if(!empty($erros) && $encontrouUmaAlteracao == 1){
                 http_response_code(400);
@@ -161,7 +167,7 @@ class Listas
                 //Verifica se o registro existe e se existir faz o update
                 if($rows > 0){
 
-                    $variaveis = array("titulo", "descricao"); 
+                    $variaveis = array("titulo", "descricao", "status"); 
 
                     $sql = "UPDATE listas SET ";
 

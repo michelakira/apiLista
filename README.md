@@ -105,7 +105,7 @@ Senha: 123456
 | `codigo_lista ` | `INT` | **Obrigatório**. Código da lista no sistema|
 | `titulo ` | `String(150)` | Título da Lista|
 | `descricao ` | `Text` | Descrição da Lista|
-| `status ` | `INT` | Status da Lista - 1 - Aberto, 2 - Fechado|
+| `status ` | `Text` | Status da Lista - 1 - Aberto, 2 - Fechado|
 
 
 ```http
