@@ -103,8 +103,9 @@ Senha: 123456
 | Parâmetro(Query)   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `codigo_lista ` | `INT` | **Obrigatório**. Código da lista no sistema|
-| `titulo ` | `String(150)` | **Obrigatório**. Título da Lista|
-| `descricao ` | `Text` | **Obrigatório**. Descrição da Lista|
+| `titulo ` | `String(150)` | Título da Lista|
+| `descricao ` | `Text` | Descrição da Lista|
+| `status ` | `Text` | Status da Lista - 1 - Aberto, 2 - Fechado|
 
 
 ```http
