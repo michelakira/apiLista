@@ -3,6 +3,25 @@
 
 Desenvolvimento de uma API Restful em PHP com autenticação JWT.
 
+## Autores
+
+- [@michelakira](https://github.com/michelakira)
+
+
+## Instalação
+
+Instale os arquivo dentro da pasta htdocs e faça a importação do arquivo api.sql no banco de dados.
+
+
+
+
+## Documentação
+
+Na pasta POSTMAN podemos encontrar a collection e environment dos endpoints que contém todas as funcionalidades da API.
+
+Na pasta Documentação existe um arquvivo index.html que contém visualmente uma documentação dos endpoints como Curl, retornos em Json e os códigos do erro.
+
+
 
 ## Documentação da API
 
@@ -96,21 +115,5 @@ Desenvolvimento de uma API Restful em PHP com autenticação JWT.
 
 
 
-## Autores
 
-- [@michelakira](https://github.com/michelakira)
-
-
-## Instalação
-
-Instale os arquivo dentro da pasta htdocs e faça a importação do arquivo api.sql no banco de dados.
-
-
-
-
-## Documentação
-
-Na pasta POSTMAN podemos encontrar a collection e environment dos endpoints que contém todas as funcionalidades da API.
-
-Na pasta Documentação existe um arquvivo index.html que contém visualmente uma documentação dos endpoints como Curl, retornos em Json e os códigos do erro.
 
