@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>API - Documentação</title>
+    <meta name="description" content="">
+    <meta name="author" content="ticlekiwi">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="js/highlight.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<div class="left-menu">
+    <div class="content-logo">
+        <div class="logo">
+            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
+            <span>API Documentação</span>
+        </div>
+    </div>
+    <div class="mobile-menu-closer"></div>
+    <div class="content-menu">
+        <div class="content-infos">
+            <div class="info"><b>Version:</b> 1.0</div>
+        </div>
+        <ul>
+            <li class="scroll-to-link active" data-target="content-get-started">
+                <a>Início</a>
+            </li>
+            <li class="scroll-to-link" data-target="autenticacao">
+                <a>Autenticação (POST)</a>
+            </li>
+            <li class="scroll-to-link" data-target="lista-adicionar">
+                <a>Lista - Adicionar (POST)</a>
+            </li>
+            <li class="scroll-to-link" data-target="lista-consultar-todos">
+                <a>Lista - Consultar Todos (GET)</a>
+            </li>
+            <li class="scroll-to-link" data-target="lista-consultar">
+                <a>Lista - Consultar (GET)</a>
+            </li>
+            <li class="scroll-to-link" data-target="lista-atualizar">
+                <a>Lista - Atualizar (PUT, PATCH)</a>
+            </li>
+            <li class="scroll-to-link" data-target="lista-excluir">
+                <a>Lista - Excluir (DELETE)</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-errors">
+                <a>Erros</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-page">
+    <div class="content-code"></div>
+    <div class="content">
+        <div class="overflow-hidden content-section" id="content-get-started">
+            <h1>Início</h1>
+            <p>
+                API desenvolvida como teste prático do processo seletivo
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="autenticacao">
+            <h2>Autenticação (POST)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/oauth/token</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request POST 'http://127.0.0.1/api/oauth/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'login={login}' \
+--data-urlencode 'senha={senha}'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ik1pY2hlbCBBa2lyYSIsImV4cGlyZXNfaW4iOjYwMCwiZXhwaXJlc19pbl9kYXRlIjoiMjAyNC0wNC0yMyAxODozMDoxMCJ9.o8lKWvItXJpgOTfaSXzVycNNyLxGCa63zjQUBw7oKiM",
+    "data": {
+        "codigo": 1,
+        "nome": "Michel Akira",
+        "expires_in": 600,
+        "expires_in_date": "2024-04-23 18:30:10"
+    }
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Content-Type</td>
+                    <td>application/x-www-form-urlencoded</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>QUERY PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>login</td>
+                    <td>String</td>
+                    <td>Login do usuário do sistema</td>
+                </tr>
+                <tr>
+                    <td>senha</td>
+                    <td>String</td>
+                    <td>Senha do usuário do sistema</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="lista-adicionar">
+            <h2>Lista - Adicionar (POST)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/lista/adicionar</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request POST 'http://127.0.0.1/api/lista/adicionar' \
+--header 'Authorization: Bearer {access_token}' \
+--form 'titulo="Teste do título"' \
+--form 'descricao="Somente um teste de envio da descrição da lista"'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "dados": "Dados foram inseridos com sucesso.",
+    "codigoLista": "20"
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Authorization</td>
+                    <td>Bearer {access_token}</td>
+                    <td>Token gerado pela autenticação do usuário</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>QUERY PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>titulo *</td>
+                    <td>String(150)</td>
+                    <td>Título da lista</td>
+                </tr>
+                <tr>
+                    <td>descricao *</td>
+                    <td>Text</td>
+                    <td>Descrição da lista</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">* Campos obrigatórios</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="lista-consultar-todos">
+            <h2>Lista - Consultar Todos (GET)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/lista/consultar</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request GET 'http://127.0.0.1/api/lista/consultar' \
+--header 'Authorization: Bearer {access_token}'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "dados": [
+        {
+            "codigo": 3,
+            "usuario_codigo": 1,
+            "titulo": "Título 1",
+            "descricao": "Descrição do Título 1",
+            "data_entrada": "2024-04-22 20:06:11",
+            "data_atualizacao": null
+        },
+        {
+            "codigo": 4,
+            "usuario_codigo": 1,
+            "titulo": "Título 2",
+            "descricao": "Descrição do Título 2",
+            "data_entrada": "2024-04-22 20:16:11",
+            "data_atualizacao": null
+        },
+        {
+            "codigo": 6,
+            "usuario_codigo": 1,
+            "titulo": "Título 3",
+            "descricao": "Descrição do Título 3",
+            "data_entrada": "2024-04-22 20:26:11",
+            "data_atualizacao": null
+        },
+    ]
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Authorization</td>
+                    <td>Bearer {access_token}</td>
+                    <td>Token gerado pela autenticação do usuário</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="lista-consultar">
+            <h2>Lista - Consultar (GET)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/lista/consultar/{codigo_lista}</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request GET 'http://127.0.0.1/api/lista/consultar/{codigo_lista}' \
+--header 'Authorization: Bearer {access_token}'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "dados": {
+        "codigo": 3,
+        "usuario_codigo": 1,
+        "titulo": "Título 1",
+        "descricao": "Descrição do Título 1",
+        "data_entrada": "2024-04-22 20:06:11",
+        "data_atualizacao": null
+    }
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Authorization</td>
+                    <td>Bearer {access_token}</td>
+                    <td>Token gerado pela autenticação do usuário</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>QUERY PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>codigo_lista*</td>
+                    <td>INT</td>
+                    <td>Código da lista no sistema</td>
+                </tr>
+                </tbody>
+				<tfoot>
+                    <tr>
+                        <td colspan="3">* Campos obrigatórios pelo menos a passagem de um parâmetro</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="lista-atualizar">
+            <h2>Lista - Atualizar (PUT, PATCH)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/lista/atualizar/{codigo_lista}</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request PUT 'http://127.0.0.1/api//lista/atualizar/{codigo_lista}' \
+--header 'Authorization: Bearer {access_token}' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'titulo=Teste' \
+--data-urlencode 'descricao=Mais um teste'
+
+curl --location --request PATCH 'http://127.0.0.1/api//lista/atualizar/{codigo_lista}' \
+--header 'Authorization: Bearer {access_token}' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'titulo=Teste' \
+--data-urlencode 'descricao=Mais um teste'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "dados": "Dados atualizados com sucesso."
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Authorization</td>
+                    <td>Bearer {access_token}</td>
+                    <td>Token gerado pela autenticação do usuário</td>
+                </tr>
+                <tr>
+                    <td>Content-Type</td>
+                    <td>application/x-www-form-urlencoded</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>QUERY PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>codigo_lista*</td>
+                    <td>INT</td>
+                    <td>Código da lista no sistema</td>
+                </tr>
+                <tr>
+                    <td>titulo *</td>
+                    <td>String(150)</td>
+                    <td>Título da lista</td>
+                </tr>
+                <tr>
+                    <td>descricao *</td>
+                    <td>Text</td>
+                    <td>Descrição da lista</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">* Campos obrigatórios pelo menos a passagem de um parâmetro</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="lista-excluir">
+            <h2>Lista - Excluir (DELETE)</h2>
+            <h3>Endpoint: <span style="text-transform: lowercase;">/api/lista/excluir/{codigo_lista}</span></h3>
+            <pre><code class="bash">
+# Curl de exemplo:
+curl --location --request DELETE 'http://127.0.0.1/api/lista/excluir/{codigo_lista}' \
+--header 'Authorization: Bearer {access_token}'
+                </code></pre>
+            <br>
+            <pre><code class="json">
+Resultado exemplo :
+
+{
+    "dados": "Dados foram excluidos com sucesso."
+}
+                </code></pre>
+            <h4>HEADER PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Authorization</td>
+                    <td>Bearer {access_token}</td>
+                    <td>Token gerado pela autenticação do usuário</td>
+                </tr>
+                </tbody>
+            </table>
+			<h4>QUERY PARÂMETROS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>codigo_lista*</td>
+                    <td>INT</td>
+                    <td>Código da lista no sistema</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">* Campos obrigatórios pelo menos a passagem de um parâmetro</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="overflow-hidden content-section" id="content-errors">
+            <h2>Erros</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Código de Erro HTTP</th>
+                    <th>URL</th>
+                    <th>Mensagem</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>400</td>
+                    <td></td>
+                    <td>
+                        O recurso solicitado não está disponível
+                    </td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td></td>
+                    <td>
+                        Access_token é inválido, verifique se cabeçalho novamente.
+                    </td>
+                </tr>
+				<tr>
+                    <td>401</td>
+                    <td></td>
+                    <td>
+                        Header com problema faltando Content-Type: application/x-www-form-urlencoded.
+                    </td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td></td>
+                    <td>
+                        Access_token inválido. Deve ser gerado um novo para o consumo da API.
+                    </td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td></td>
+                    <td>
+                        O recurso solicitado não está disponível
+                    </td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>/lista/consultar/{codigo_lista}, /lista/excluir/{codigo_lista}, /lista/atualizar/{codigo_lista} </td>
+                    <td>
+                        A variavel informada deve ser do tipo inteiro.
+                    </td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>/oauth/token</td>
+                    <td>
+                        Login ou senha informados não são válidos!
+                    </td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>/oauth/token</td>
+                    <td>
+                        Login e senha são obrigatórios
+                    </td>
+                </tr>
+                <tr>
+                    <td>406</td>
+                    <td>/lista/adicionar</td>
+                    <td>
+                        Houve algum erro ao inserir os dados.
+                    </td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>/lista/adicionar</td>
+                    <td>
+                        Campos obrigatórios não informados
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="content-code"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

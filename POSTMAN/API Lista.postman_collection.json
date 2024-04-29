@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "3b45c04c-5bce-4e31-9a0e-2d854d6e1222",
+		"name": "API Lista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29125576"
+	},
+	"item": [
+		{
+			"name": "Lista",
+			"item": [
+				{
+					"name": "Lista - Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "titulo",
+									"value": "Título de teste",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "Descrição do título de teste ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/lista/adicionar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"adicionar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Adicionar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "titulo",
+											"value": "Título de teste",
+											"type": "text"
+										},
+										{
+											"key": "descricao",
+											"value": "Descrição do título de teste ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/lista/adicionar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"adicionar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": \"Dados foram inseridos com sucesso.\",\r\n    \"codigoLista\": \"20\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Lista - Consultar Todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/lista/consultar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"consultar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Consultar Todos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/lista/consultar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"consultar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": [\r\n        {\r\n            \"codigo\": 3,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Teste\",\r\n            \"descricao\": \"Mais%20um%20teste\",\r\n            \"data_entrada\": \"2024-04-22 20:06:11\",\r\n            \"data_atualizacao\": \"2024-04-23 13:56:18\"\r\n        },\r\n        {\r\n            \"codigo\": 7,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 21:43:08\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 8,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"select * from teste where teste = &#039;testando_codigo&#039; LIMIT 1;\",\r\n            \"data_entrada\": \"2024-04-22 22:07:00\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 9,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Ajuste teste\",\r\n            \"descricao\": \"testando\",\r\n            \"data_entrada\": \"2024-04-23 13:37:14\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 10,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"teste\",\r\n            \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n            \"data_entrada\": \"2024-04-23 15:26:50\",\r\n            \"data_atualizacao\": \"2024-04-23 19:04:05\"\r\n        },\r\n        {\r\n            \"codigo\": 11,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-23 18:37:55\",\r\n            \"data_atualizacao\": null\r\n        },\r\n        {\r\n            \"codigo\": 12,\r\n            \"usuario_codigo\": 1,\r\n            \"titulo\": \"Título de teste\",\r\n            \"descricao\": \"Descrição do título de teste \",\r\n            \"data_entrada\": \"2024-04-24 19:35:51\",\r\n            \"data_atualizacao\": null\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Lista - Consultar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/lista/consultar/{{codigo_lista}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"consultar",
+								"{{codigo_lista}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Consultar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/lista/consultar/{{codigo_lista}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"consultar",
+										"{{codigo_lista}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": {\r\n        \"codigo\": 10,\r\n        \"usuario_codigo\": 1,\r\n        \"titulo\": \"teste\",\r\n        \"descricao\": \"105%3B%20DROP%20TABLE%20listas\",\r\n        \"data_entrada\": \"2024-04-23 15:26:50\",\r\n        \"data_atualizacao\": \"2024-04-23 19:04:05\"\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Lista - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "titulo",
+									"value": "teste",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "teste",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/lista/atualizar/{{codigo_lista}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"atualizar",
+								"{{codigo_lista}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Atualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "titulo",
+											"value": "teste",
+											"type": "text"
+										},
+										{
+											"key": "descricao",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/lista/atualizar/{{codigo_lista}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"atualizar",
+										"{{codigo_lista}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": \"Dados atualizados com sucesso.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Lista - Atualizar",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "titulo",
+									"value": "teste",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "teste",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/lista/atualizar/{{codigo_lista}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"atualizar",
+								"{{codigo_lista}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Atualizar",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "titulo",
+											"value": "teste",
+											"type": "text"
+										},
+										{
+											"key": "descricao",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/lista/atualizar/{{codigo_lista}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"atualizar",
+										"{{codigo_lista}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": \"Dados atualizados com sucesso.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Lista - Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "titulo",
+									"value": "teste",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "teste",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/lista/excluir/{{codigo_lista}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lista",
+								"excluir",
+								"{{codigo_lista}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista - Excluir",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "titulo",
+											"value": "teste",
+											"type": "text"
+										},
+										{
+											"key": "descricao",
+											"value": "teste",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/lista/excluir/{{codigo_lista}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lista",
+										"excluir",
+										"{{codigo_lista}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"dados\": \"Dados foram excluidos com sucesso.\"\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AUTENTICAÇÃO",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseBody = pm.response.json();\r",
+							"pm.environment.set('access_token', responseBody.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "login",
+							"value": "{{login}}",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "{{senha}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/oauth/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AUTENTICAÇÃO",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "login",
+									"value": "{{login}}",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "{{senha}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/oauth/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RpZ28iOjEsIm5vbWUiOiJNaWNoZWwgQWtpcmEiLCJleHBpcmVzX2luIjo2MDAsImV4cGlyZXNfaW5fZGF0ZSI6IjIwMjQtMDQtMjUgMDA6NDM6NTcifQ.van7mq_mkszWrViD17aQF8JBsC224luKFF1Jbz02iN0\",\r\n    \"data\": {\r\n        \"codigo\": 1,\r\n        \"nome\": \"Michel Akira\",\r\n        \"expires_in\": 573,\r\n        \"expires_in_date\": \"2024-04-25 00:43:57\"\r\n    }\r\n}"
+				}
+			]
+		}
+	]
+}
